@@ -10,11 +10,9 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 
 function SEO({ description, lang, meta, imageURL, title }) {
-  const metaDescription =
-    description ||
-    "Interior design, inspirations, and renovations by Cydney Morris."
+  const metaDescription = description || "Website description here"
 
-  const metaTitle = title ? title + " — The Foxalow" : "The Foxalow"
+  const metaTitle = title ? title : "My website"
   return (
     <Helmet
       htmlAttributes={{
@@ -36,7 +34,7 @@ function SEO({ description, lang, meta, imageURL, title }) {
         },
         {
           property: "og:image",
-          content: imageURL || "https://www.thefoxalow.com/og-image.jpg",
+          content: imageURL || "website-absolute-url",
         },
         {
           property: `og:type`,
@@ -54,10 +52,6 @@ function SEO({ description, lang, meta, imageURL, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-    {
-    name: "google-site-verification",
-    content: "E1ku3ehTesj3LZ4fsvHG2mGHgEFOZyjeIFT61bZNClc"
-    }
       ].concat(meta)}
     />
   )
