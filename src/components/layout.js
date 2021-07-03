@@ -12,7 +12,7 @@ import Nav from "./nav"
 import SEO from "./seo"
 import Footer from "./footer"
 
-import "./../stylesheets/index.scss"
+import "./../stylesheets/index.css"
 
 const Layout = props => {
   return (
